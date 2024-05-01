@@ -1,4 +1,11 @@
 *** Settings ***
+Documentation    I tried using the special variable syntax, 'example as literal', because this was the only thing that worked
+...              https://forum.robotframework.org/t/secureauth-sign-in-pop-up-how-to-handle/757/5
+...              https://marketsquare.github.io/robotframework-browser/Browser.html#Close%20Browser
+...        	     //
+...              Set Browser Timeout is added when creating a new page, this seems to work according to the documentation, still figuring out why it doesn't work with the default
+...              https://marketsquare.github.io/robotframework-browser/Browser.html#Set%20Browser%20Timeout
+...              //
 Library    Browser
 
 *** Variables ***
