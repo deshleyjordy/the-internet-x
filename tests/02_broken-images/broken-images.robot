@@ -31,6 +31,6 @@ Scenario: A user checks all the images of the website to see if it's loaded corr
         # Get the attribute from item
         ${imageSrc} =    Get Attribute    //*[@class="example"]//img[${i}]    src
 
-        # For now: just give a warning if an image doesn't give expected status of 200
+        # For now let the test pass; just give a warning if an image doesn't give expected status of 200
         Run Keyword And Warn On Failure   GET    ${BASE_URL}${imageSrc}    expected_status=200
     END
