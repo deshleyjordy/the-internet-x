@@ -1,7 +1,8 @@
 *** Settings ***
 Library    Browser
+Resource    ../navigation.resource
 
 *** Keywords ***
 Setup Browser
-    New Page    https://the-internet.herokuapp.com/
+    New Page    ${BASE_URL}
     Get Title    contains    The Internet
