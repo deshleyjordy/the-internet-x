@@ -6,3 +6,4 @@ Resource    ../navigation.resource
 Setup Browser
     New Page    ${BASE_URL}
     Get Title    contains    The Internet
+    Set Browser Timeout    30s
