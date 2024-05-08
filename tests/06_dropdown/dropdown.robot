@@ -13,11 +13,15 @@ Scenario: A user selects an option from a dropdown menu
     Click    text=Dropdown
     Get Text    id=content    contains    Dropdown List
 
-    # Validate dropdown exists and options
+    # Validate dropdown exists and all available label options
     Get Select Options    id=dropdown    validate    [v["label"] for v in value] == ["Please select an option", "Option 1", "Option 2"]  
 
-    # Select option 2 by value
-    Select Options By    id=dropdown    value    2
+    # Validate default selected value
+    Get Attribute    //option[@value=""]    selected    ==    selected
+
+    # Select option 2 by label
+    Select Options By    id=dropdown    label    Option 2
     
-    # Validate that option 2 is selected somehow
-     
+    # Validate that option 2 is selected
+    Get Attribute    //option[@value="2"]    selected    ==    selected
+    
