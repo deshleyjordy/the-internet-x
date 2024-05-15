@@ -16,7 +16,7 @@ Scenario: A user gets a specifiek src attribute from an image
 
 Scenario: A user checks a specifiek URL to check if the image is NOT available
     # RequestsLibrary: GET to check if image is retrieved
-    GET    ${BASE_URL}asdf.jpg    expected_status=404 
+    GET    ${BASE_URL}/asdf.jpg    expected_status=404 
 
 Scenario: A user checks all the images of the website to see if it's loaded correctly
     # Navigate to broken images page
